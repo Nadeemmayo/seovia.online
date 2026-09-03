@@ -1,1 +1,955 @@
-1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Seovia — Premium Digital Marketing & SEO Agency</title>
+    <meta name="description" content="Seovia is a premium digital marketing and SEO agency specializing in brand growth, link building, content strategy, and digital transformation for enterprise clients." />
+    <link rel="canonical" href="https://seovia.online/" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%231a365d' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' font-weight='bold' fill='%2306b6d4' text-anchor='middle'%3ESeovia%3C/text%3E%3C/svg%3E" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Seovia — Premium Digital Marketing Agency" />
+    <meta property="og:url" content="https://seovia.online/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEOVIA123"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SEOVIA123');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: #1a202c;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d5a8c;
+            --accent: #06b6d4;
+            --light-accent: #cffafe;
+            --dark: #0f172a;
+            --white: #ffffff;
+            --gray: #f8fafc;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            gap: 45px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 11px 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: #0891b2;
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2.5px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f0f4f8 0%, var(--light-accent) 100%);
+            padding: 120px 40px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 64px;
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--accent);
+            background: linear-gradient(135deg, var(--accent), #0891b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 14px 35px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #0891b2;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 12px 33px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 52px;
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .section-header .highlight {
+            color: var(--accent);
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 48px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 40px;
+            transition: all 0.35s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: inline-flex;
+        }
+
+        .service-card h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 22px;
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .service-link:hover {
+            color: #0891b2;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            background: var(--gray);
+            border-radius: 12px;
+            padding: 60px;
+            margin-bottom: 80px;
+        }
+
+        .why-choose h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 40px;
+            color: var(--dark);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .why-icon {
+            font-size: 28px;
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .why-content h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 18px;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .why-content p {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 80px 40px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 80px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 44px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-section .btn-primary {
+            background: var(--accent);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #0891b2;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            max-width: 600px;
+            margin: 80px auto;
+            padding: 60px 40px;
+            background: var(--light-accent);
+            color: var(--dark);
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .newsletter-section h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 32px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .newsletter-section p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 13px 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 13px;
+            background: var(--white);
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .newsletter-form button {
+            padding: 13px 28px;
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 6px;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #0891b2;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 40px 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-section h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 2;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .footer-section p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 12px;
+            padding-top: 20px;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(6, 182, 212, 0.2);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        /* Floating Contact */
+        .floating-contact {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            z-index: 99;
+        }
+
+        .contact-options {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 15px;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating-contact:hover .contact-options {
+            display: flex;
+        }
+
+        .float-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: none;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .float-whatsapp {
+            background: #25D366;
+        }
+
+        .float-email {
+            background: #EA4335;
+        }
+
+        .float-linkedin {
+            background: #0077B5;
+        }
+
+        .float-main {
+            background: var(--accent);
+            color: var(--white);
+            width: 65px;
+            height: 65px;
+            font-size: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-header h2 {
+                font-size: 36px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .why-choose {
+                padding: 40px;
+            }
+
+            .cta-section {
+                padding: 50px 30px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Seovia<span>.</span></a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/blog.html">Insights</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <a href="https://wa.me/923074646927" class="cta-btn">Let's Talk</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Transform Your Digital <span class="highlight">Presence</span></h1>
+        <p>Premium SEO, content strategy, and digital marketing for enterprise brands worldwide</p>
+        <div class="hero-cta">
+            <a href="https://wa.me/923074646927" class="btn-primary">Get Free Audit</a>
+            <a href="#services" class="btn-secondary">Explore Services</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Stats -->
+        <section class="stats-grid">
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Projects Delivered</p>
+            </div>
+            <div class="stat-item">
+                <h3>120+</h3>
+                <p>Enterprise Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3>15+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>3.2M</h3>
+                <p>Organic Traffic Generated</p>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services">
+            <div class="section-header">
+                <h2>Our <span class="highlight">Services</span></h2>
+                <p>Comprehensive digital marketing solutions designed for enterprise growth</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-link"></i></div>
+                    <h3>Strategic Link Building</h3>
+                    <p>Premium backlinks from authoritative domains with contextual relevance to accelerate your rankings.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h3>Content Strategy</h3>
+                    <p>Data-driven content creation and optimization to drive organic visibility and brand authority.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-cog"></i></div>
+                    <h3>Technical Excellence</h3>
+                    <p>Complete technical SEO audits and implementation to ensure optimal website performance.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Performance Marketing</h3>
+                    <p>ROI-focused campaigns across search, social, and display for measurable business results.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email Campaigns</h3>
+                    <p>Strategic email marketing for lead nurturing, customer retention, and revenue growth.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-edit"></i></div>
+                    <h3>Brand Positioning</h3>
+                    <p>Premium placement and PR to establish thought leadership and market authority.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose -->
+        <section class="why-choose">
+            <h2>Why Choose <span style="color: var(--accent);">Seovia</span></h2>
+            <div class="why-choose-grid">
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-check"></i></div>
+                    <div class="why-content">
+                        <h3>Enterprise-Grade</h3>
+                        <p>Dedicated teams with Fortune 500 experience and proven expertise.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-check"></i></div>
+                    <div class="why-content">
+                        <h3>Data-Driven</h3>
+                        <p>Every strategy backed by analytics, research, and real-world results.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-check"></i></div>
+                    <div class="why-content">
+                        <h3>Full Transparency</h3>
+                        <p>Monthly reporting, direct access, and honest communication every step.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-check"></i></div>
+                    <div class="why-content">
+                        <h3>ROI Focused</h3>
+                        <p>Results matter. We measure everything by your bottom-line impact.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-check"></i></div>
+                    <div class="why-content">
+                        <h3>Industry Leaders</h3>
+                        <p>Certified experts in SEO, PPC, content, and digital transformation.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-check"></i></div>
+                    <div class="why-content">
+                        <h3>Global Reach</h3>
+                        <p>Serving enterprise clients across North America, Europe, and beyond.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <h2>Ready for <span style="color: var(--light-accent);">Growth</span>?</h2>
+            <p>Let's discuss your digital strategy and how we can accelerate your business objectives.</p>
+            <a href="https://wa.me/923074646927" class="btn-primary">Schedule Consultation</a>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <h2>Digital Insights</h2>
+            <p>Get weekly marketing trends, SEO updates, and growth strategies for enterprise brands.</p>
+            <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                <input type="email" placeholder="your@company.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Seovia</h4>
+                    <p>Premium digital marketing agency for enterprise brands. Strategic SEO, content, and performance marketing delivered with precision.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/menadeemmayos/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/19aDt6pcgh/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Nadeem_seo" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://t.me/Nadeemmayos" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/blog.html">Insights</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Link Building</a></li>
+                        <li><a href="#services">Content Strategy</a></li>
+                        <li><a href="#services">Technical SEO</a></li>
+                        <li><a href="#services">Performance Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get In Touch</h4>
+                    <p><strong>Nadeem Mayo</strong><br>Founder & Director</p>
+                    <p style="margin-top: 12px;">
+                        <a href="https://wa.me/923074646927" style="color: var(--accent);"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </p>
+                    <p>
+                        <a href="mailto:nadeemonlin@gmail.com" style="color: var(--accent);"><i class="fas fa-envelope"></i> Email</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Seovia. All Rights Reserved. | <a href="/privacy-policy.html">Privacy</a> | <a href="/terms.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact -->
+    <div class="floating-contact">
+        <div class="contact-options">
+            <a href="https://wa.me/923074646927" class="float-btn float-whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:nadeemonlin@gmail.com" class="float-btn float-email" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/menadeemmayos/" target="_blank" class="float-btn float-linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button class="float-btn float-main" title="Contact Options">
+            <i class="fas fa-headset"></i>
+        </button>
+    </div>
+
+    <script>
+        function handleNewsletter(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to Seovia Insights!');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
