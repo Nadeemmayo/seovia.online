@@ -1,1 +1,349 @@
-3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services — Seovia | Digital Marketing & SEO Solutions</title>
+    <meta name="description" content="Explore Seovia's full suite of link building, content strategy, technical SEO, and performance marketing services for enterprise brands." />
+    <link rel="canonical" href="https://seovia.online/services.html" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%231a365d' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' font-weight='bold' fill='%2306b6d4' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEOVIA123"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SEOVIA123');
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background: #ffffff; color: #1a202c; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d5a8c;
+            --accent: #06b6d4;
+            --light-accent: #cffafe;
+            --dark: #0f172a;
+            --white: #ffffff;
+            --gray: #f8fafc;
+        }
+        header { background: var(--white); border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 700; color: var(--primary); letter-spacing: -1px; text-decoration: none; }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 45px; list-style: none; }
+        nav a { text-decoration: none; color: #475569; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; transition: all 0.3s ease; position: relative; }
+        nav a:hover { color: var(--accent); }
+        nav a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s ease; }
+        nav a:hover::after { width: 100%; }
+        .cta-btn { background: var(--accent); color: var(--white); border: none; padding: 11px 28px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+        .cta-btn:hover { background: #0891b2; transform: translateY(-2px); }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; }
+        .hamburger span { width: 25px; height: 2.5px; background: var(--primary); border-radius: 2px; }
+
+        .hero { background: linear-gradient(135deg, #0f172a 0%, var(--primary) 55%, var(--secondary) 100%); padding: 110px 40px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -180px; right: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%); border-radius: 50%; }
+        .hero-content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
+        .hero .eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 18px; display: block; }
+        .hero h1 { font-family: 'Sora', sans-serif; font-size: 56px; color: var(--white); margin-bottom: 20px; font-weight: 700; line-height: 1.2; letter-spacing: -1.5px; }
+        .hero h1 .highlight { color: var(--accent); }
+        .hero p { font-size: 17px; color: #cbd5e1; line-height: 1.75; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 90px 40px; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header .label { font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 2.5px; font-weight: 700; display: block; margin-bottom: 14px; }
+        .section-header h2 { font-family: 'Sora', sans-serif; font-size: 42px; color: var(--dark); font-weight: 700; margin-bottom: 15px; letter-spacing: -1px; }
+        .section-header .highlight { color: var(--accent); }
+        .section-header p { font-size: 15px; color: #64748b; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+        .service-detail { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 55px; align-items: center; margin-bottom: 90px; }
+        .service-detail:nth-child(even) .service-visual { order: 2; }
+        .service-visual { width: 100%; height: 300px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 80px; color: var(--accent); box-shadow: 0 20px 50px rgba(26, 54, 93, 0.2); }
+        .service-num { font-family: 'Sora', sans-serif; font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 12px; display: block; }
+        .service-content h3 { font-family: 'Sora', sans-serif; font-size: 28px; color: var(--dark); margin-bottom: 16px; font-weight: 700; letter-spacing: -0.5px; }
+        .service-content p { font-size: 14.5px; color: #64748b; line-height: 1.85; margin-bottom: 20px; }
+        .service-features { list-style: none; margin-bottom: 24px; }
+        .service-features li { font-size: 13.5px; color: #334155; padding: 8px 0; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .service-features li i { color: var(--accent); font-size: 14px; }
+        .service-cta-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; }
+        .service-cta-link:hover { color: #0891b2; }
+
+        .process-section { margin-bottom: 90px; }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px; }
+        .process-card { background: var(--gray); border-radius: 10px; padding: 36px 30px; text-align: center; transition: all 0.3s ease; }
+        .process-card:hover { box-shadow: 0 10px 30px rgba(6, 182, 212, 0.12); transform: translateY(-6px); }
+        .process-step { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: var(--white); font-family: 'Sora', sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+        .process-card h3 { font-family: 'Sora', sans-serif; font-size: 17px; color: var(--dark); margin-bottom: 10px; font-weight: 700; }
+        .process-card p { font-size: 12.5px; color: #64748b; line-height: 1.7; }
+
+        .pricing-section { margin-bottom: 90px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .pricing-card { background: var(--white); border: 1px solid #e2e8f0; border-radius: 12px; padding: 44px 36px; transition: all 0.3s ease; position: relative; }
+        .pricing-card.featured { border-color: var(--accent); box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15); transform: scale(1.03); }
+        .pricing-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--white); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 18px; border-radius: 20px; }
+        .pricing-card:hover { transform: translateY(-6px); box-shadow: 0 12px 35px rgba(6, 182, 212, 0.12); }
+        .pricing-card.featured:hover { transform: scale(1.03) translateY(-6px); }
+        .pricing-card h3 { font-family: 'Sora', sans-serif; font-size: 21px; color: var(--dark); margin-bottom: 8px; font-weight: 700; }
+        .pricing-card .tagline { font-size: 12.5px; color: #94a3b8; margin-bottom: 22px; }
+        .pricing-card .price { font-family: 'Sora', sans-serif; font-size: 38px; color: var(--dark); font-weight: 700; margin-bottom: 4px; }
+        .pricing-card .price span { font-size: 13px; color: #94a3b8; font-weight: 500; }
+        .pricing-card .price-note { font-size: 11.5px; color: #94a3b8; margin-bottom: 28px; }
+        .pricing-features { list-style: none; margin-bottom: 30px; }
+        .pricing-features li { font-size: 13.5px; color: #475569; padding: 10px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; gap: 10px; }
+        .pricing-features li i { color: var(--accent); font-size: 13px; }
+        .pricing-btn { display: block; text-align: center; background: var(--white); color: var(--primary); border: 2px solid var(--primary); padding: 13px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; }
+        .pricing-card.featured .pricing-btn { background: var(--accent); color: var(--white); border: none; }
+        .pricing-btn:hover { background: var(--primary); color: var(--white); }
+        .pricing-card.featured .pricing-btn:hover { background: #0891b2; }
+
+        .faq-section { margin-bottom: 90px; max-width: 850px; margin-left: auto; margin-right: auto; }
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 26px 0; }
+        .faq-item h3 { font-family: 'Sora', sans-serif; font-size: 16px; color: var(--dark); margin-bottom: 10px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .faq-item h3 i { color: var(--accent); font-size: 14px; }
+        .faq-item p { font-size: 13.5px; color: #64748b; line-height: 1.75; padding-left: 24px; }
+
+        .cta-box { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 75px 60px; text-align: center; border-radius: 14px; position: relative; overflow: hidden; }
+        .cta-box::before { content: ''; position: absolute; bottom: -150px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%); border-radius: 50%; }
+        .cta-box-content { position: relative; z-index: 1; }
+        .cta-box h2 { font-family: 'Sora', sans-serif; font-size: 38px; margin-bottom: 16px; font-weight: 700; letter-spacing: -1px; }
+        .cta-box .highlight { color: var(--accent); }
+        .cta-box p { font-size: 15px; margin-bottom: 30px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .btn-primary { background: var(--accent); color: var(--white); border: none; padding: 15px 40px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+        .btn-primary:hover { background: #0891b2; transform: translateY(-3px); }
+
+        .floating-contact { position: fixed; right: 30px; bottom: 30px; z-index: 99; }
+        .contact-options { display: none; flex-direction: column; gap: 12px; margin-bottom: 15px; animation: slideUp 0.3s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .floating-contact:hover .contact-options { display: flex; }
+        .float-btn { width: 55px; height: 55px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; font-size: 20px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: none; }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-whatsapp { background: #25D366; }
+        .float-email { background: #EA4335; }
+        .float-linkedin { background: #0077B5; }
+        .float-main { background: var(--accent); color: var(--white); width: 65px; height: 65px; font-size: 24px; }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hamburger { display: flex; }
+            .hero { padding: 75px 30px; }
+            .hero h1 { font-size: 34px; }
+            .container { padding: 55px 30px; }
+            .section-header h2 { font-size: 28px; }
+            .service-detail { grid-template-columns: 1fr; gap: 30px; }
+            .service-detail:nth-child(even) .service-visual { order: 0; }
+            .pricing-card.featured { transform: scale(1); }
+            .cta-box { padding: 50px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Seovia<span>.</span></a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/blog.html">Insights</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <a href="https://wa.me/923074646927" class="cta-btn">Let's Talk</a>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">What We Offer</span>
+            <h1>Full-Spectrum <span class="highlight">Growth Services</span></h1>
+            <p>From link building to performance marketing, every service is built on 15+ years of enterprise digital marketing expertise.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section>
+            <div class="service-detail">
+                <div class="service-content">
+                    <span class="service-num">01 — Strategic Link Building</span>
+                    <h3>Premium Backlink Acquisition</h3>
+                    <p>Contextually relevant backlinks from authoritative, vetted domains that move rankings without risking your brand's integrity.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Manual, relationship-driven outreach</li>
+                        <li><i class="fas fa-check"></i> DR/DA verified placements</li>
+                        <li><i class="fas fa-check"></i> Transparent monthly reporting</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="service-cta-link">Get Started →</a>
+                </div>
+                <div class="service-visual"><i class="fas fa-link"></i></div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-content">
+                    <span class="service-num">02 — Content Strategy</span>
+                    <h3>Data-Driven Content Creation</h3>
+                    <p>Content built around search intent and competitive gaps — designed to rank, convert, and build lasting topical authority.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Keyword and intent research</li>
+                        <li><i class="fas fa-check"></i> SEO-optimized long-form content</li>
+                        <li><i class="fas fa-check"></i> Content performance tracking</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="service-cta-link">Get Started →</a>
+                </div>
+                <div class="service-visual"><i class="fas fa-pen-fancy"></i></div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-content">
+                    <span class="service-num">03 — Technical SEO</span>
+                    <h3>Complete Technical Optimization</h3>
+                    <p>Full-site audits addressing crawlability, speed, indexation, and Core Web Vitals to remove hidden ranking barriers.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Comprehensive technical audit</li>
+                        <li><i class="fas fa-check"></i> Site speed & Core Web Vitals fixes</li>
+                        <li><i class="fas fa-check"></i> Structured data implementation</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="service-cta-link">Get Started →</a>
+                </div>
+                <div class="service-visual"><i class="fas fa-cog"></i></div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-content">
+                    <span class="service-num">04 — Performance Marketing</span>
+                    <h3>ROI-Focused Paid Campaigns</h3>
+                    <p>Search, social, and display campaigns engineered around measurable business outcomes, not vanity impressions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Cross-channel campaign management</li>
+                        <li><i class="fas fa-check"></i> Conversion rate optimization</li>
+                        <li><i class="fas fa-check"></i> Real-time ROI dashboards</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="service-cta-link">Get Started →</a>
+                </div>
+                <div class="service-visual"><i class="fas fa-chart-line"></i></div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-content">
+                    <span class="service-num">05 — Email Marketing</span>
+                    <h3>Lifecycle Email Campaigns</h3>
+                    <p>Strategic email flows built for lead nurturing, retention, and revenue growth across the full customer journey.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Automated lifecycle sequences</li>
+                        <li><i class="fas fa-check"></i> List segmentation strategy</li>
+                        <li><i class="fas fa-check"></i> A/B tested campaigns</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="service-cta-link">Get Started →</a>
+                </div>
+                <div class="service-visual"><i class="fas fa-envelope"></i></div>
+            </div>
+
+            <div class="service-detail">
+                <div class="service-content">
+                    <span class="service-num">06 — Brand Positioning</span>
+                    <h3>Digital PR & Thought Leadership</h3>
+                    <p>Premium placements and PR strategy that establish market authority and elevate brand perception at scale.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Journalist & publisher outreach</li>
+                        <li><i class="fas fa-check"></i> Executive thought leadership content</li>
+                        <li><i class="fas fa-check"></i> Brand mention monitoring</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="service-cta-link">Get Started →</a>
+                </div>
+                <div class="service-visual"><i class="fas fa-bullhorn"></i></div>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="section-header">
+                <span class="label">How It Works</span>
+                <h2>Our <span class="highlight">Process</span></h2>
+                <p>A proven four-step methodology refined across 500+ delivered projects</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card"><div class="process-step">01</div><h3>Discovery</h3><p>We analyze your market, competitors, and current performance to find real opportunities.</p></div>
+                <div class="process-card"><div class="process-step">02</div><h3>Strategy</h3><p>A custom growth roadmap is built around your specific goals and budget.</p></div>
+                <div class="process-card"><div class="process-step">03</div><h3>Execution</h3><p>Our team delivers with precision — no cut corners, no automated shortcuts.</p></div>
+                <div class="process-card"><div class="process-step">04</div><h3>Reporting</h3><p>Monthly performance reviews tie every action back to business impact.</p></div>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <div class="section-header">
+                <span class="label">Investment</span>
+                <h2>Packages Built for <span class="highlight">Scale</span></h2>
+                <p>Transparent pricing designed to match your growth stage</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="tagline">For growing brands</p>
+                    <div class="price">$1,200<span>/mo</span></div>
+                    <p class="price-note">Billed monthly, cancel anytime</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Core SEO & link building</li>
+                        <li><i class="fas fa-check"></i> Monthly reporting</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Most Popular</span>
+                    <h3>Growth</h3>
+                    <p class="tagline">For scaling enterprises</p>
+                    <div class="price">$3,200<span>/mo</span></div>
+                    <p class="price-note">Billed monthly, cancel anytime</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Full-service SEO & content</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> Bi-weekly strategy calls</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="tagline">For high-volume brands</p>
+                    <div class="price">Let's Talk</div>
+                    <p class="price-note">Tailored to your needs</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Full-funnel marketing team</li>
+                        <li><i class="fas fa-check"></i> Priority execution</li>
+                        <li><i class="fas fa-check"></i> Executive strategy sessions</li>
+                    </ul>
+                    <a href="https://wa.me/923074646927" class="pricing-btn">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="section-header">
+                <span class="label">Common Questions</span>
+                <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+            </div>
+            <div class="faq-item"><h3><i class="fas fa-question-circle"></i> How long until I see results?</h3><p>Most clients see measurable movement within 60-90 days, with compounding gains over 6-12 months.</p></div>
+            <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Do you work with specific industries?</h3><p>We work across most B2B and B2C sectors, with deep experience in SaaS, e-commerce, and professional services.</p></div>
+            <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Can I change my package later?</h3><p>Yes, all plans are cancel-anytime with no long-term lock-in, and upgrades can happen mid-cycle.</p></div>
+        </section>
+
+        <section class="cta-box">
+            <div class="cta-box-content">
+                <h2>Ready for <span class="highlight">Growth</span>?</h2>
+                <p>Let's discuss your digital strategy and how we can accelerate your business objectives.</p>
+                <a href="https://wa.me/923074646927" class="btn-primary">Schedule Consultation</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-contact">
+        <div class="contact-options">
+            <a href="https://wa.me/923074646927" class="float-btn float-whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:nadeemonlin@gmail.com" class="float-btn float-email" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/menadeemmayos/" target="_blank" class="float-btn float-linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button class="float-btn float-main" title="Contact Options"><i class="fas fa-headset"></i></button>
+    </div>
+</body>
+</html>
