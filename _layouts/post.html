@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{ page.title | escape }} | Seovia</title>
+
+<meta name="description" content="{{ page.description | default: page.title | escape }}">
+<meta name="author" content="Seovia">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%231a365d' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' font-weight='bold' fill='%2306b6d4' text-anchor='middle'%3ESeovia%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Seovia">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: page.title | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+
+{% if page.thumbnail %}
+<meta property="og:image" content="{{ page.thumbnail | absolute_url }}">
+{% else %}
+<meta property="og:image" content="https://seovia.online/preview.jpg">
+{% endif %}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | default: page.title | escape }}">
+
+{% if page.thumbnail %}
+<meta name="twitter:image" content="{{ page.thumbnail | absolute_url }}">
+{% else %}
+<meta name="twitter:image" content="https://seovia.online/preview.jpg">
+{% endif %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #1a202c;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --primary: #1a365d;
+    --secondary: #2d5a8c;
+    --accent: #06b6d4;
+    --light-accent: #cffafe;
+    --dark: #0f172a;
+    --white: #ffffff;
+    --gray: #f8fafc;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Sora', sans-serif;
+}
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+}
+
+.cta-btn {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 11px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background: #0891b2;
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2.5px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu {
+    padding: 18px 24px;
+    background: var(--gray);
+    border-top: 1px solid #e2e8f0;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 12px 0;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.article-hero {
+    background: linear-gradient(135deg, #f0f4f8 0%, var(--light-accent) 100%);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 90px 30px;
+    text-align: center;
+}
+
+.article-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.category-pill {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 999px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px solid var(--accent);
+}
+
+.article-hero h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 22px;
+    margin-bottom: 20px;
+    color: var(--dark);
+    letter-spacing: -1px;
+}
+
+.article-hero p {
+    color: #64748b;
+    font-size: 17px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+.article-meta {
+    margin-top: 24px;
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+main {
+    padding: 60px 30px;
+}
+
+.article-image {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.1);
+    margin-bottom: 45px;
+}
+
+.article-content {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #334155;
+}
+
+.article-content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-top: 45px;
+    margin-bottom: 18px;
+}
+
+.article-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-top: 35px;
+    margin-bottom: 14px;
+}
+
+.article-content p {
+    margin-bottom: 22px;
+}
+
+.article-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.article-content strong {
+    color: var(--dark);
+}
+
+.article-content ul,
+.article-content ol {
+    padding-left: 28px;
+    margin: 20px 0;
+}
+
+.article-content ul { list-style: disc; }
+.article-content ol { list-style: decimal; }
+.article-content li { margin-bottom: 10px; }
+
+.article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding: 15px 20px;
+    margin: 30px 0;
+    background: var(--light-accent);
+    color: var(--dark);
+}
+
+.back-link-wrap {
+    margin-top: 55px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 55px 30px 35px;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+footer h3 span {
+    color: var(--accent);
+}
+
+footer p.tagline {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+footer p.copyright {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+    .desktop-menu { display: none !important; }
+
+    .article-hero { padding: 60px 24px; }
+    .article-hero h1 { font-size: 30px; }
+    .article-content { font-size: 16px; }
+    .article-content h2 { font-size: 25px; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"BlogPosting",
+"headline":{{ page.title | jsonify }},
+"description":{{ page.description | default: page.title | jsonify }},
+"url":"{{ page.url | absolute_url }}",
+"datePublished":"{{ page.date | date_to_xmlschema }}",
+"author":{
+"@type":"Organization",
+"name":"Seovia"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Seovia",
+"url":"https://seovia.online/"
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="{{ '/' | relative_url }}" class="logo">Seovia<span>.</span></a>
+
+        <nav class="desktop-menu">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/about.html' | relative_url }}">About</a>
+            <a href="{{ '/services.html' | relative_url }}">Services</a>
+            <a href="{{ '/blog.html' | relative_url }}" class="active">Insights</a>
+            <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+        </nav>
+
+        <div style="display:flex; gap:15px; align-items:center;">
+            <a href="https://wa.me/923074646927" class="cta-btn desktop-menu">Let's Talk</a>
+        </div>
+
+        <button class="mobile-menu-btn hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" style="display:none;">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <div class="mobile-menu">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}">About</a>
+        <a href="{{ '/services.html' | relative_url }}">Services</a>
+        <a href="{{ '/blog.html' | relative_url }}">Insights</a>
+        <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+    </div>
+</header>
+
+<section class="article-hero">
+    <div class="article-container">
+        {% if page.category %}
+        <span class="category-pill">{{ page.category | escape }}</span>
+        {% endif %}
+
+        <h1>{{ page.title | escape }}</h1>
+
+        {% if page.description %}
+        <p>{{ page.description | escape }}</p>
+        {% endif %}
+
+        <div class="article-meta">
+            {% if page.date %}
+            <span><i class="far fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<main>
+    <article class="article-container">
+
+        {% if page.thumbnail and page.thumbnail != "" %}
+        <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.thumbnail_alt | default: page.title | escape }}" class="article-image">
+        {% endif %}
+
+        <div class="article-content">
+            {{ content }}
+        </div>
+
+        <div class="back-link-wrap">
+            <a href="{{ '/blog.html' | relative_url }}" class="cta-btn">
+                <i class="fas fa-arrow-left"></i> Back To Insights
+            </a>
+        </div>
+
+    </article>
+</main>
+
+<footer>
+    <h3>Seovia<span>.</span></h3>
+    <p class="tagline">Premium SEO • Content Strategy • Performance Marketing</p>
+    <p class="copyright">© 2026 Seovia. All Rights Reserved.</p>
+</footer>
+
+<script>
+const menuBtn = document.querySelector(".mobile-menu-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+        const isOpen = mobileMenu.classList.contains("active");
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+}
+</script>
+
+</body>
+</html>
