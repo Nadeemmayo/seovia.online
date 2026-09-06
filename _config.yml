@@ -1,0 +1,10 @@
+title: Seovia
+url: "https://seovia.online"
+baseurl: ""
+
+markdown: kramdown
+
+permalink: /blog/:title/
+
+exclude:
+  - README.md
