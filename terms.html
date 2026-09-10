@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms & Conditions — Seovia</title>
+    <meta name="description" content="Seovia Terms & Conditions — the terms governing use of our website and services." />
+    <link rel="canonical" href="https://seovia.online/terms.html" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%231a365d' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' font-weight='bold' fill='%2306b6d4' text-anchor='middle'%3ESeovia%3C/text%3E%3C/svg%3E" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LC8KXZ291"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2LC8KXZ291');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background: #ffffff; color: #1a202c; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d5a8c;
+            --accent: #06b6d4;
+            --light-accent: #cffafe;
+            --dark: #0f172a;
+            --white: #ffffff;
+            --gray: #f8fafc;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--accent); }
+
+        nav { display: flex; gap: 45px; list-style: none; }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after { width: 100%; }
+
+        .cta-btn {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 11px 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover { background: #0891b2; transform: translateY(-2px); }
+
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; }
+        .hamburger span { width: 25px; height: 2.5px; background: var(--primary); border-radius: 2px; }
+
+        .page-hero {
+            background: linear-gradient(135deg, #f0f4f8 0%, var(--light-accent) 100%);
+            padding: 90px 40px 70px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .page-hero .label {
+            font-size: 12px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+            font-weight: 600;
+            display: block;
+        }
+
+        .page-hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 50px;
+            color: var(--dark);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1.5px;
+        }
+
+        .page-hero p.updated {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 80px 40px 120px;
+        }
+
+        .policy-block { margin-bottom: 50px; }
+
+        .policy-block h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 25px;
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .policy-block h2 i { font-size: 18px; color: var(--accent); }
+
+        .policy-block p {
+            font-size: 15px;
+            color: #475569;
+            line-height: 1.85;
+            margin-bottom: 14px;
+        }
+
+        .policy-block ul { list-style: none; margin-bottom: 14px; }
+
+        .policy-block ul li {
+            font-size: 15px;
+            color: #475569;
+            line-height: 1.85;
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 9px;
+        }
+
+        .policy-block ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 7px;
+            height: 7px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .policy-block a { color: var(--accent); font-weight: 600; text-decoration: none; }
+        .policy-block a:hover { color: #0891b2; }
+
+        .contact-callout {
+            background: var(--gray);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .contact-callout h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 20px;
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .contact-callout p { font-size: 14px; color: #475569; line-height: 1.8; margin-bottom: 8px; }
+
+        .floating-contact { position: fixed; right: 30px; bottom: 30px; z-index: 99; }
+
+        .contact-options {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 15px;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .floating-contact:hover .contact-options { display: flex; }
+
+        .float-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: none;
+        }
+
+        .float-btn:hover { transform: scale(1.1); }
+        .float-whatsapp { background: #25D366; }
+        .float-email { background: #EA4335; }
+        .float-linkedin { background: #0077B5; }
+
+        .float-main {
+            background: var(--accent);
+            color: var(--white);
+            width: 65px;
+            height: 65px;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .hamburger { display: flex; }
+            .page-hero { padding: 60px 25px 50px; }
+            .page-hero h1 { font-size: 32px; }
+            .container { padding: 55px 25px 80px; }
+            .contact-callout { padding: 28px 22px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Seovia<span>.</span></a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/blog.html">Insights</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <a href="https://wa.me/923074646927" class="cta-btn">Let's Talk</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <span class="label">Legal</span>
+        <h1>Terms &amp; Conditions</h1>
+        <p class="updated">Last updated: September 2026</p>
+    </section>
+
+    <div class="container">
+        <div class="policy-block">
+            <h2><i class="fas fa-info-circle"></i>Acceptance of Terms</h2>
+            <p>By accessing or using the seovia.online website, or by engaging Seovia's SEO, content strategy, or digital marketing services, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, please discontinue use of the site and our services.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i class="fas fa-network-wired"></i>Services</h2>
+            <p>Seovia provides strategic link building, content strategy, technical SEO, performance marketing, email campaigns, and brand positioning services. Service scope, deliverables, and timelines for any specific engagement are agreed separately between Seovia and the client, typically via direct communication or a signed proposal.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i class="fas fa-user-check"></i>Client Responsibilities</h2>
+            <ul>
+                <li>Provide accurate information about your brand, website, and campaign objectives.</li>
+                <li>Ensure that content, links, and materials supplied to Seovia comply with applicable laws and do not infringe third-party rights.</li>
+                <li>Make payments for agreed services in accordance with the terms communicated for each engagement.</li>
+            </ul>
+        </div>
+
+        <div class="policy-block">
+            <h2><i class="fas fa-chart-line"></i>No Guaranteed Rankings</h2>
+            <p>Search engine ranking outcomes depend on numerous factors outside Seovia's control, including search engine algorithm changes, competitor activity, and site-specific factors. While we apply proven strategies aimed at sustainable organic growth, we do not guarantee specific rankings, traffic levels, or revenue outcomes.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i class="fas fa-shield-alt"></i>Intellectual Property</h2>
+            <p>All content on the seovia.online website, including text, graphics, logos, and design elements, is the property of Seovia unless otherwise stated, and may not be reproduced or distributed without prior written consent.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i class="fas fa-ban"></i>Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, Seovia shall not be liable for any indirect, incidental, or consequential damages arising from the use of our website or services, including but not limited to loss of traffic, revenue, or search visibility.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i class="fas fa-money-check-alt"></i>Payments and Refunds</h2>
+            <p>Payment terms, including deposits, milestones, and refund conditions, are agreed on a per-engagement basis. In the absence of a specific written agreement, all payments made for completed work are considered final.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i class="fas fa-edit"></i>Changes to These Terms</h2>
+            <p>We may update these Terms & Conditions from time to time. Continued use of our website or services after changes are posted constitutes acceptance of the revised terms.</p>
+        </div>
+
+        <div class="contact-callout">
+            <h3>Questions About These Terms</h3>
+            <p><strong>Nadeem Mayo</strong> — Founder &amp; Director</p>
+            <p><a href="mailto:nadeemonlin@gmail.com"><i class="fas fa-envelope"></i> nadeemonlin@gmail.com</a></p>
+            <p><a href="https://wa.me/923074646927"><i class="fab fa-whatsapp"></i> WhatsApp Direct Line</a></p>
+        </div>
+    </div>
+
+    <div class="floating-contact">
+        <div class="contact-options">
+            <a href="https://wa.me/923074646927" class="float-btn float-whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:nadeemonlin@gmail.com" class="float-btn float-email" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/menadeemmayos/" target="_blank" class="float-btn float-linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button class="float-btn float-main" title="Contact Options">
+            <i class="fas fa-headset"></i>
+        </button>
+    </div>
+</body>
+</html>
