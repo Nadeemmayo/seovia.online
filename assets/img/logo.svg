@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 56" role="img" aria-label="Seovia">
+<g transform="translate(0 4)"><svg viewBox="0 0 48 48" width="48" height="48"><defs><linearGradient id="lgL" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0EA5E9"/><stop offset="1" stop-color="#0369A1"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#lgL)"/><circle cx="24" cy="24" r="12" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/><path d="m28.5 19.5-2.6 6.4-6.4 2.6 2.6-6.4Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></g>
+<text x="62" y="29" font-family="Lexend, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#0C1A2B" letter-spacing="-.4">Seo<tspan fill="#0369A1">via</tspan></text>
+<text x="63" y="47" font-family="Lexend, Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#5A6081" letter-spacing="2.4">YOUR GUIDE TO DIGITAL GROWTH</text>
+</svg>
